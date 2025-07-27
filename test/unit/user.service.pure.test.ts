@@ -1,9 +1,7 @@
-import { injectable } from "inversify";
 import { UserService } from "../../src/services/UserService";
 import { IUserRepository } from "../../src/repositories/IUserRepository";
 import { User } from "../../src/domain/User";
 
-@injectable()
 class StubRepo implements IUserRepository {
   async findAll() { return []; }
   async findById(_id: string) { return null; }
